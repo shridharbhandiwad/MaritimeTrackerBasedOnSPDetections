@@ -531,8 +531,40 @@ def create_train_val_split(dataset_path: str,
     
     # Split sequences
     n_sequences = len(detection_sequences)
-    train_indices, val_indices = train_test_split(
-        range(n_sequences), train_size=train_ratio, random_state=random_state)
+    
+    # Handle case where we have only one sequence (like from simulation)
+    if n_sequences == 1:
+        print(f"Warning: Only 1 sequence found. Splitting sequence into multiple subsequences...")
+        
+        # Split the single sequence into multiple subsequences
+        sequence_length = len(detection_sequences[0])
+        subsequence_size = max(10, sequence_length // 10)  # Create at least 10 frames per subsequence
+        
+        # Create subsequences
+        new_detection_sequences = []
+        new_ground_truth_sequences = []
+        
+        for start_idx in range(0, sequence_length, subsequence_size):
+            end_idx = min(start_idx + subsequence_size, sequence_length)
+            if end_idx - start_idx >= 5:  # Only include subsequences with at least 5 frames
+                new_detection_sequences.append(detection_sequences[0][start_idx:end_idx])
+                new_ground_truth_sequences.append(ground_truth_sequences[0][start_idx:end_idx])
+        
+        detection_sequences = new_detection_sequences
+        ground_truth_sequences = new_ground_truth_sequences
+        n_sequences = len(detection_sequences)
+        
+        print(f"Created {n_sequences} subsequences from original sequence")
+    
+    # Ensure we have at least 2 sequences for splitting
+    if n_sequences < 2:
+        # If still only 1 sequence, duplicate it for both train and val
+        print("Warning: Not enough sequences for proper train/val split. Using the same data for both.")
+        train_indices = [0]
+        val_indices = [0]
+    else:
+        train_indices, val_indices = train_test_split(
+            range(n_sequences), train_size=train_ratio, random_state=random_state)
     
     # Create train dataset
     train_detections = [detection_sequences[i] for i in train_indices]
