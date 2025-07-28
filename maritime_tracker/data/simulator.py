@@ -180,8 +180,8 @@ class TargetMotionModel:
     
     def __init__(self, target_params: TargetParameters):
         self.target_params = target_params
-        self.position = np.array(target_params.initial_position)
-        self.velocity = np.array(target_params.initial_velocity)
+        self.position = np.array(target_params.initial_position, dtype=np.float64)
+        self.velocity = np.array(target_params.initial_velocity, dtype=np.float64)
         self.acceleration = np.array([0.0, 0.0])
         
         # Track history

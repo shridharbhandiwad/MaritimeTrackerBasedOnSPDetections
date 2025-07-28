@@ -1,0 +1,19 @@
+{
+  "scenario_name": "maneuvering_targets",
+  "duration": 300.0,
+  "dt": 1.0,
+  "num_frames": 300,
+  "radar_params": {
+    "carrier_freq": 9400000000.0,
+    "max_range": 40000,
+    "range_resolution": 15.0,
+    "azimuth_beamwidth": 1.2
+  },
+  "env_params": {
+    "sea_state": 3,
+    "wind_speed": 10.0,
+    "wind_direction": 180.0
+  },
+  "num_targets": 3,
+  "generated_at": "2025-07-28T08:07:36.078506"
+}
