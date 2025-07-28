@@ -1,0 +1,19 @@
+{
+  "scenario_name": "validation",
+  "duration": 180.0,
+  "dt": 1.0,
+  "num_frames": 180,
+  "radar_params": {
+    "carrier_freq": 9400000000.0,
+    "max_range": 30000,
+    "range_resolution": 15.0,
+    "azimuth_beamwidth": 1.0
+  },
+  "env_params": {
+    "sea_state": 4,
+    "wind_speed": 12.0,
+    "wind_direction": 45.0
+  },
+  "num_targets": 3,
+  "generated_at": "2025-07-28T08:07:40.729284"
+}

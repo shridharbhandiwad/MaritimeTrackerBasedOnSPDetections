@@ -1,0 +1,19 @@
+{
+  "scenario_name": "calm_seas_multiple_ships",
+  "duration": 300.0,
+  "dt": 1.0,
+  "num_frames": 300,
+  "radar_params": {
+    "carrier_freq": 9400000000.0,
+    "max_range": 40000,
+    "range_resolution": 15.0,
+    "azimuth_beamwidth": 1.2
+  },
+  "env_params": {
+    "sea_state": 2,
+    "wind_speed": 8.0,
+    "wind_direction": 0.0
+  },
+  "num_targets": 5,
+  "generated_at": "2025-07-28T08:06:56.207165"
+}

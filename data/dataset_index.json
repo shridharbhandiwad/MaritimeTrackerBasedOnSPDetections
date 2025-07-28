@@ -1,0 +1,37 @@
+{
+  "simple_test": {
+    "path": "data/simple_test",
+    "type": "test",
+    "description": "Simple test scenario"
+  },
+  "validation": {
+    "path": "data/validation",
+    "type": "validation",
+    "description": "Validation dataset"
+  },
+  "calm_seas_multiple_ships": {
+    "path": "data/training/calm_seas_multiple_ships",
+    "type": "training",
+    "description": "Training scenario: calm_seas_multiple_ships"
+  },
+  "rough_seas_sparse_targets": {
+    "path": "data/training/rough_seas_sparse_targets",
+    "type": "training",
+    "description": "Training scenario: rough_seas_sparse_targets"
+  },
+  "dense_traffic_moderate_seas": {
+    "path": "data/training/dense_traffic_moderate_seas",
+    "type": "training",
+    "description": "Training scenario: dense_traffic_moderate_seas"
+  },
+  "long_range_tracking": {
+    "path": "data/training/long_range_tracking",
+    "type": "training",
+    "description": "Training scenario: long_range_tracking"
+  },
+  "maneuvering_targets": {
+    "path": "data/training/maneuvering_targets",
+    "type": "training",
+    "description": "Training scenario: maneuvering_targets"
+  }
+}

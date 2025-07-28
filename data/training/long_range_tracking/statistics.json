@@ -1,0 +1,8 @@
+{
+  "total_detections": 1200,
+  "target_detections": 1200,
+  "clutter_detections": 0,
+  "clutter_ratio": 0.0,
+  "avg_detections_per_frame": 4.0,
+  "avg_targets_per_frame": 4.0
+}
