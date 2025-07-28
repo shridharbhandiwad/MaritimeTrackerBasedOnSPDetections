@@ -1,0 +1,38 @@
+
+=== Maritime Radar Tracking Evaluation Report ===
+
+TRACKING ACCURACY:
+- Average OSPA Distance: 100.00 m
+- OSPA Standard Deviation: 0.00 m
+- MOTA (Multiple Object Tracking Accuracy): 0.000
+- MOTP (Multiple Object Tracking Precision): inf m
+
+DETECTION PERFORMANCE:
+- Precision: 0.000
+- Recall: 0.000
+- False Positive Rate: 0.000
+- ID Switches: 0
+
+TRACK QUALITY:
+- Average Track Length: 0.0 frames
+- Track Fragmentation Rate: 0.000
+- Track Completion Rate: 0.000
+- Longest Track: 0 frames
+- Total Tracks: 0
+
+MARITIME-SPECIFIC METRICS:
+- Target Classification Precision: 0.000
+- Target Classification Recall: 0.000
+- Clutter Classification Precision: 0.000
+- Clutter Classification Recall: 0.000
+- Average Velocity Error: 0.00 m/s
+- Average Range Error: 0.00 m
+- Average Azimuth Error: 0.00 degrees
+
+SUMMARY:
+- Total Frames Processed: 30
+- Total Ground Truth Objects: 90
+- Total Matched Objects: 0
+- Total Missed Objects: 90
+- Total False Positives: 0
+        

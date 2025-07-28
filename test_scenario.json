@@ -1,0 +1,57 @@
+{
+  "radar_params": {
+    "carrier_freq": 9400000000.0,
+    "bandwidth": 10000000.0,
+    "prf": 1000.0,
+    "peak_power": 100000.0,
+    "antenna_gain": 35.0,
+    "noise_figure": 3.0,
+    "max_range": 30000,
+    "range_resolution": 15.0,
+    "azimuth_beamwidth": 1.0
+  },
+  "env_params": {
+    "sea_state": 4,
+    "wind_speed": 12.0,
+    "wind_direction": 45.0,
+    "wave_height": 2.0
+  },
+  "targets": [
+    {
+      "initial_position": [
+        5000,
+        8000
+      ],
+      "initial_velocity": [
+        8,
+        -3
+      ],
+      "rcs_base": 150,
+      "target_type": "ship"
+    },
+    {
+      "initial_position": [
+        -7000,
+        12000
+      ],
+      "initial_velocity": [
+        5,
+        5
+      ],
+      "rcs_base": 80,
+      "target_type": "ship"
+    },
+    {
+      "initial_position": [
+        15000,
+        -3000
+      ],
+      "initial_velocity": [
+        -12,
+        8
+      ],
+      "rcs_base": 25,
+      "target_type": "boat"
+    }
+  ]
+}

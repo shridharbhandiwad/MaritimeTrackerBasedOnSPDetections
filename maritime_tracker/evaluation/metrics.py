@@ -52,14 +52,19 @@ class OSPAMetric:
         if n_gt == 0 and n_est == 0:
             return {'ospa': 0.0, 'localization': 0.0, 'cardinality': 0.0}
         
+        # Initialize variables
+        ospa_distance = 0.0
+        localization_error = 0.0
+        cardinality_error = 0.0
+        
         if n_gt == 0:
             # Only false alarms
             cardinality_error = self.cutoff_distance
-            localization_error = 0.0
+            ospa_distance = self.cutoff_distance
         elif n_est == 0:
             # Only missed detections
             cardinality_error = self.cutoff_distance
-            localization_error = 0.0
+            ospa_distance = self.cutoff_distance
         else:
             # Calculate distance matrix
             distances = cdist(ground_truth, estimates)
@@ -106,7 +111,7 @@ class OSPAMetric:
             cardinality_error = (cardinality_component / m) ** (1/self.order)
         
         return {
-            'ospa': ospa_distance if n_gt > 0 or n_est > 0 else 0.0,
+            'ospa': ospa_distance,
             'localization': localization_error,
             'cardinality': cardinality_error
         }
